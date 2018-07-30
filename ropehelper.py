@@ -1,8 +1,19 @@
 import discord
 import datetime
 from datetime import timedelta, date
+import requests
+import platform
+import sys
+from random import randint
 
-file = open('token.txt', 'r')
+platform = platform.system()
+if platform == 'Windows':
+    file = open('token.txt', 'r')
+    log = open('discord_error_rope.log', 'w')
+elif platform == 'Linux':
+    file = open('/opt/scripts/ropehelper/token.txt', 'r')
+    log = open('/tmp/discord_error_rope.log', 'w')
+
 TOKEN = file.read()
 
 client = discord.Client()

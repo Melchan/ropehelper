@@ -26,6 +26,11 @@ Multiple different dice types can be chosen by adding the directly after the pre
 
 >!roll 1d4+2d6
 
+Output:
+*Each single die roll result 
+*Sum of single die type result 
+*sum of all rolls result
+
 ### !git
 Displays link to the bots source in git
 
